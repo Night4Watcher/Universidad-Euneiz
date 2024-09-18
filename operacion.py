@@ -28,8 +28,10 @@ while operacion.upper() != "Q":
     elif operacion.upper() == "Q":
         break
     
+    # COMPROBAR SI SE QUIERE REALIZAR ALGUNA OPERACION MAS
     operacion = input("¿Que operacion quieres realizar? ")
     if operacion.upper() != "Q":
+        # COMPROBAR SI SE QUIEREN CAMBIAR LOS NUMEROS CON LOS QUE REALIZAR LAS OPERACIONES
         cambio_numeros = input("¿Quieres cambiar los numeros con los que hacer las operaciones? ")
         if cambio_numeros.upper() == "SI":
             n1 = int(input("Dame un numero: "))
