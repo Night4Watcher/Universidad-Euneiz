@@ -24,6 +24,10 @@ while operacion.upper() != "Q":
     elif operacion.upper() == "MULTIPLICACION" or operacion.upper() == "MULTIPLICAR":
         multiplicar = n1 * n2
         print(f"De acuerdo, el resultado de la multiplicacion es: {multiplicar}")
+    # REALIZAR UN MODULO
+    elif operacion.upper() == "MODULO":
+        modulo = n1 % n2
+        print(f"De acuerdo, el resultado del modulo es: {modulo}")
     # NO REALIZAR NADA Y SALIR DEL PROGRAMA
     elif operacion.upper() == "Q":
         break
