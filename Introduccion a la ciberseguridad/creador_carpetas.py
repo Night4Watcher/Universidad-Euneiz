@@ -1,16 +1,22 @@
 import os
 
 # BLOQUE ELIMINADOR DE CARPETAS
-def eliminador_carpetas():
-    nombre_carpeta = input("¿Que carpeta quieres eliminar? ")
+def eliminador_carpetas(n_carpetas):
+    nombre_carpeta_texto = input("¿Que carpeta quieres eliminar? ")
     lista_carpetas = os.listdir(f"{os.path.expanduser('~')}/Desktop")
+    carpetas_eliminar = n_carpetas
     os.chdir(f"{os.path.expanduser('~')}/Desktop")
-    contador_archivos = 0
     for item in lista_carpetas:
-        nombre_carpeta = f"{nombre_carpeta}{contador_archivos}"
-        if item == nombre_carpeta:
-            os.rmdir(f"{os.path.expanduser('~')}/Desktop{nombre_carpeta}")
-        contador_archivos += 1
+        contador_archivos = 0
+        print(item)
+        input("Pulsa enter para continuar")
+        while contador_archivos <= carpetas_eliminar:
+            nombre_carpeta = (f"{nombre_carpeta_texto}{contador_archivos}")
+            print(nombre_carpeta)
+            input("Pulsa enter para continuar")
+            if item == nombre_carpeta:
+                os.rmdir(f"{os.path.expanduser('~')}/Desktop/{nombre_carpeta}")
+            contador_archivos += 1
 
 # BLOQUE DE CREADOR DE CARPETAS INDIVIDUALES
 def creador_carpeta_individual():
@@ -51,7 +57,7 @@ def main():
             # EJECUCION DEL PROGRAMA DE ELIMINACION DE UNA UNICA CARPETA
         elif cantidad_carpetas_eliminar >= 2:
             print(f"Vamos a eliminar {cantidad_carpetas_eliminar} carpetas.")
-            eliminador_carpetas()
+            eliminador_carpetas(cantidad_carpetas_eliminar)
             # EJECUCION DEL PROGRAMA DE ELIMINACION DE VARIAS CARPETAS
 
 main()
