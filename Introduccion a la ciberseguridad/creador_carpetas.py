@@ -3,6 +3,7 @@ import os
 # BLOQUE DE CREADOR DE CARPETAS INDIVIDUALES
 def creador_carpeta_individual():
     nombre_carpeta = input("Dame un nombre para la carpeta: ")
+    os.chdir("/Users/nightwatcher/Desktop")
     os.mkdir(nombre_carpeta)
 
 # BLOQUE DE CREADOR DE CARPETAS CON AÑADIDO NUMERICO
