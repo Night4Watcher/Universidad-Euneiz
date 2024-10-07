@@ -7,12 +7,13 @@ def creador_carpeta_individual():
     os.mkdir(nombre_carpeta)
 
 # BLOQUE DE CREADOR DE CARPETAS CON AÑADIDO NUMERICO
-def creador_carpetas_bucle():
+def creador_carpetas_bucle(n_carpetas):
     nombre_carpeta = input("Dame un nombre para las carpetas: ")
-    cantidad_carpetas = int(input("¿Cuantas carpetas quieres crear? "))
+    cantidad_carpetas = n_carpetas
     carpetas_creadas = 0
+    os.chdir("/Users/nightwatcher/Desktop")
     while carpetas_creadas < cantidad_carpetas:
-        os.mkdir(f"{nombre_carpeta}{carpetas_creadas}")
+        os.mkdir(f"{nombre_carpeta}{carpetas_creadas + 1}")
         carpetas_creadas += 1
 
 # BLOQUE PRINCIPAL DEL PROGRAMA
@@ -28,6 +29,6 @@ def main():
         creador_carpeta_individual()
     elif cantidad_carpetas >= 2:
         print("Vamos a crear 2 o mas carpetas")
-        creador_carpetas_bucle()
+        creador_carpetas_bucle(cantidad_carpetas)
 
 main()
