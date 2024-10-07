@@ -16,6 +16,7 @@ def creador_carpetas_bucle():
 
 # BLOQUE PRINCIPAL DEL PROGRAMA
 def main():
+    os.system("clear")
     print("Bienvenido a tu creador de carpetas personal.")
     input("Pulsa enter para continuar...")
     # BORRADO GENERAL DE LO QUE ESTA MOSTRANDO EL TERMINAL
