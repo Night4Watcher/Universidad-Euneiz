@@ -16,6 +16,7 @@ def cerrar_notificacion():
     ventana_notificacion.destroy()
 
 boton = tkinter.Button(ventana_notificacion, text="ok", command=cerrar_notificacion)
-boton.pack()
+boton.place(x=340, y=260)
 
+# BUCLE QUE MANTIENE LA NOTIFICACION HASTA QUE SE DESTRUYA MEDIANTE EL CODIGO 
 ventana_notificacion.mainloop()
