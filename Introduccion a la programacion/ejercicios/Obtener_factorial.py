@@ -1,4 +1,11 @@
 def factorial(numero):
+    """
+    Esta funcion se encarga de devolver el factorial del numero que se introduzca en el argumento. En los argumentos de este programa unicamente se introduce un unico valor.
+    Keyword arguments:
+    argument -- Numero al que se le va a realizar el factorial
+    Return: resultado del factorial del numero en el argumento de la funcion
+    """
+
     numero = numero + 1
     resultado = 1
     for n in range(numero):
