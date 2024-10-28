@@ -8,7 +8,7 @@ def factorial(numero):
 
 def main():
     numero = int(input("Dame un numero del que hacer el numero factorial: "))
-    while numero < 0:
+    while numero <= 0:
         print("El numero no puede ser negativo")
         numero = int(input("Dame un numero del que hacer el numero factorial: "))
     print(f"El factorial de {numero} es {factorial(numero)}")
