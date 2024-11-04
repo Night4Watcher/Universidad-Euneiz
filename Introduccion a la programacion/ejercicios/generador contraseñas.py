@@ -4,6 +4,10 @@ import string
 ABECEDARIO_MINUSCULA = string.ascii_lowercase
 ABECEDARIO_MAYUSCULA = string.ascii_uppercase
 NUMEROS = string.digits
+LONGITUD_CONTRASEÑA = 12
+MAYUSCULAS_CONTRASEÑA = 1
+MINUSCULAS_CONTRASEÑA = 1
+NUMEROS_CONTRASEÑA = 1
 
 def comprobacion_cantidad(cantidad):
     """
@@ -45,7 +49,7 @@ def generador_contraseña():
     cant_numeros = 0
     cant_caracteres = cant_minusculas + cant_mayusculas + cant_numeros
     # BUCLE QUE COMPRUEBA QUE LA CONTRASEÑA QUE SE VAYA A DEVOLVER CUMPLA CON UNAS CARACTERISTICAS
-    while cant_caracteres < 12 or cant_numeros < 1 or cant_mayusculas < 1:
+    while cant_caracteres < LONGITUD_CONTRASEÑA or cant_numeros < NUMEROS_CONTRASEÑA or cant_mayusculas < MAYUSCULAS_CONTRASEÑA:
         # RESETEO DE LAS VARIABLES PARA QUE NO SE ACUMULEN LOS DISTINTOS INTENTOS ALMACENADOS
         cant_mayusculas = 0
         cant_minusculas = 0
