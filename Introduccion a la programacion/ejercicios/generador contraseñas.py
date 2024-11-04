@@ -6,6 +6,15 @@ ABECEDARIO_MAYUSCULA = string.ascii_uppercase
 NUMEROS = string.digits
 
 def comprobacion_cantidad(cantidad):
+    """
+    Esta funcion esta encargada de que el valor introducido por el usuario cumpla con que sea un valor
+    numerico y su tipo de dato sea un entero de valor positivo.
+    
+    Keyword arguments:
+    argument: Es el valor introducido por el usuario cuando se le pregunta cuantas contraseñas quiere crear
+    Return: Devuelve el numero de la cantidad de contraseñas que se van a crear
+    """
+    
     cantidad = str(cantidad)
     # COMPROBACION DE QUE LA CONTRASEÑA SEA DE VALOR NUMERICO
     while cantidad.isnumeric() == False:
@@ -20,6 +29,15 @@ def comprobacion_cantidad(cantidad):
     return cantidad
 
 def generador_contraseña():
+    """
+    Esta funcion esta encargada de generar las contraseñas solicitadas por el usuario mediante unos requisitos
+    minimos de longitud de caracteres y contenido de los caracteres.
+    
+    Keyword arguments:
+    argument -- Ningun argumento
+    Return: Devuelve la contraseña que cumple con los requisitos minimos
+    """
+    
     # VARIABLES RELACIONADAS CON EL GENERADOR DE CONTRASEÑAS
     contraseña = ""
     cant_mayusculas = 0
