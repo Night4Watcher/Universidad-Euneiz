@@ -6,5 +6,6 @@ def comprobador(coleccion, valor):
 def main():
     valor_comprobar = int(input("Dame un valor para comprobarlo en la coleccion: "))
     print(comprobador(coleccion, valor_comprobar))
+    
 
 main()
