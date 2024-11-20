@@ -1,0 +1,5 @@
+# ESCRIBIENDO "r" LE ESTAMOS ESPECIFICANDO QUE QUEREMOS ABRIR EL ARCHIVO EN MODO LECTURA
+with open("fichero_texto.txt", "r") as fichero:
+    # MEDIANTE ESTE BUCLE LE INDICAMOS QUE NOS IMPRIMA EN PANTALLA CADA LINEA DEL DOCUMENTO TXT
+    for lineas in fichero:
+        print(lineas)
