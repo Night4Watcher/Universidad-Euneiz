@@ -40,12 +40,13 @@ def generador_contraseñas(longitud, mayusculas_main, especiales_main, digitos_m
             if tipo_letra == 0:
                 letra = random.choice(minusculas)
                 contraseña = contraseña + letra
+                cantidad_caracteres += 1
             # AÑADIR LA MAYUSCULA A LA CONTRASEÑA
             elif tipo_letra == 1 and (cantidad_mayusculas < mayusculas_main):
                 letra = random.choice(mayusculas)
                 contraseña = contraseña + letra
                 cantidad_mayusculas += 1
-            cantidad_caracteres += 1
+                cantidad_caracteres += 1
         # CARACTER ESPECIAL A INTRODUCIR EN LA CONTRASEÑA
         elif caracter_introducir == 1 and (cantidad_especiales < especiales_main):
             # OBTENCION DEL CARACTER ESPECIAL A INTRODUCIR A LA CONTRASEÑA
